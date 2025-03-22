@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataweb cleaner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>DATAWEB CLEANER</h1>
+
+        <div class="card-container">
+            <!-- Upload Card -->
+            <div class="card upload-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-file-upload"></i> Upload XLSX File</h2>
+                </div>
+                <div class="card-body">
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-file-excel fa-3x"></i>
+                        <p>Drag & Drop your XLSX file here</p>
+                        <p>or</p>
+                        <label for="fileInput" class="upload-btn">Browse Files</label>
+                        <input type="file" id="fileInput" accept=".xlsx" hidden>
+                    </div>
+                    <div class="file-info" id="fileInfo">
+                        <p>No file selected</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Card -->
+            <div class="card table-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-table"></i> File Content</h2>
+                </div>
+                <div class="card-body">
+                    <div class="table-container" id="tableContainer">
+                        <p class="no-data-message">Upload an XLSX file to view its content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

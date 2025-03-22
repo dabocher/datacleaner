@@ -1,0 +1,274 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"); /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders", sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bb86fc;
+  font-size: 2.5rem;
+}
+
+/* Card Styles */
+.card-container {
+  display: grid;
+  grid-template-columns: minmax(300px, 500px);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card-container.show-table {
+  grid-template-columns: 1fr 4fr;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-header {
+  background-color: #2d2d2d;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  color: #bb86fc;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Upload Card Styles */
+.upload-area {
+  border: 2px dashed #bb86fc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-area:hover {
+  background-color: rgba(187, 134, 252, 0.05);
+}
+
+.upload-area i {
+  color: #bb86fc;
+  margin-bottom: 1rem;
+}
+
+.upload-area p {
+  margin: 0.5rem 0;
+  color: #a0a0a0;
+}
+
+.upload-btn {
+  display: inline-block;
+  background-color: #bb86fc;
+  color: #121212;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #a370db;
+}
+
+.file-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.file-info.active {
+  border-left: 4px solid #03dac6;
+}
+
+/* Table Card Styles */
+.table-container {
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.table-card {
+  display: none;
+}
+
+.table-card.show {
+  display: block;
+}
+
+.table-card.show ~ .upload-card {
+  width: 100%;
+}
+
+.no-data-message {
+  text-align: center;
+  color: #a0a0a0;
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  color: #e0e0e0;
+}
+
+thead {
+  background-color: #2d2d2d;
+  position: sticky;
+  top: 0;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #03dac6;
+  border-bottom: 2px solid #333;
+}
+
+td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #333;
+}
+
+tr:hover {
+  background-color: rgba(3, 218, 198, 0.05);
+}
+
+/* Drag and Drop Highlight */
+.highlight {
+  background-color: rgba(187, 134, 252, 0.1);
+  border-color: #03dac6;
+}
+
+/* Loading Animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(3, 218, 198, 0.2);
+  border-radius: 50%;
+  border-top-color: #03dac6;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress {
+  height: 100%;
+  background-color: #03dac6;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Error Message */
+.error-message {
+  color: #cf6679;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(3, 218, 198, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #03dac6;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card-header h2 {
+    font-size: 1.3rem;
+  }
+}
