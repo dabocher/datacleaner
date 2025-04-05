@@ -6,16 +6,16 @@ import { reader } from "./reader.js";
 export const processFile = (file) => {
   // Check if file is an Excel file
   if (!file.name.match(/\.(xlsx)$/i)) {
-    showError("Please upload an XLSX file");
+    showError("Si us plau, puja un arxiu XLSX");
     return;
   }
 
   // Check file size
   if (file.size > window.CONFIG.MAX_FILE_SIZE) {
     showError(
-      `File size exceeds the ${formatFileSize(
+      `La mida de l'arxiu supera el límit de ${formatFileSize(
         window.CONFIG.MAX_FILE_SIZE
-      )} limit`
+      )}`
     );
     return;
   }
@@ -26,7 +26,7 @@ export const processFile = (file) => {
   // Read the file
 
   reader.onerror = () => {
-    showError("Error reading file");
+    showError("Error en llegir l'arxiu");
   };
   reader.readAsArrayBuffer(file);
 };

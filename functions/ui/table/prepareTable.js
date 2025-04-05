@@ -1,7 +1,8 @@
 export const prepareTableStructure = (data) => {
   if (!data || data.length === 0) {
     return {
-      tableHTML: '<p class="no-data-message">No data found in the file</p>',
+      tableHTML:
+        "<p class=\"no-data-message\">No s'han trobat dades a l'arxiu</p>",
       headers: [],
     };
   }

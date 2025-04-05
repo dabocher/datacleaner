@@ -6,7 +6,7 @@ export const updateFileInfoLoading = (file) => {
     <p><strong>${file.name}</strong> (${formatFileSize(file.size)})</p>
     <div class="loading">
       <div class="spinner"></div>
-      <p>Processing file...</p>
+      <p>Processant arxiu...</p>
     </div>
   `;
   fileInfo.classList.add("active");

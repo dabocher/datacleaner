@@ -8,6 +8,6 @@ reader.onload = (e) => {
     const workbook = XLSX.read(data, { type: "array" });
     processExcelData(workbook);
   } catch (error) {
-    showError("Error processing file: " + error.message);
+    showError("Error en processar l'arxiu: " + error.message);
   }
 };

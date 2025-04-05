@@ -5,7 +5,7 @@ export const updateProgress = (processed, total) => {
   const percentage = Math.round((processed / total) * 100);
 
   fileInfo.innerHTML = `
-    <p><strong>Processing:</strong> ${percentage}% complete</p>
+    <p><strong>Processant:</strong> ${percentage}% completat</p>
     <div class="progress-bar">
       <div class="progress" style="width: ${percentage}%"></div>
     </div>
@@ -15,8 +15,8 @@ export const updateProgress = (processed, total) => {
 export const completeProcessing = (data) => {
   const fileInfo = window.fileInfo;
   fileInfo.innerHTML = `
-    <p><strong>Processing complete!</strong></p>
-    <p>${data.length - 1} rows loaded</p>
+    <p><strong>Processament completat!</strong></p>
+    <p>${data.length - 1} files carregades</p>
   `;
 
   // Add format button if needed
