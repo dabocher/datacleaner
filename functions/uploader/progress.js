@@ -1,4 +1,6 @@
 import { addFormatButton } from "../ui/button/button.js";
+import { enableDragDrop } from "./dragAndDropper.js";
+import { enableNavigationButtons } from "./fileProcesser.js";
 
 export const updateProgress = (processed, total) => {
   const fileInfo = window.fileInfo;
@@ -23,4 +25,9 @@ export const completeProcessing = (data) => {
   if (data.length > 1) {
     addFormatButton(data);
   }
+
+  // No volvemos a habilitar el drag & drop ni los botones de navegación
+  // para mantener oculta la tarjeta de "Navega pels Arxius"
+  // enableDragDrop();
+  // enableNavigationButtons();
 };
