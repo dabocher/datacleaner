@@ -1,0 +1,19 @@
+/* Estilos para el mensaje de éxito */
+.success-card {
+  margin-top: 1rem;
+  background-color: rgba(3, 218, 198, 0.05);
+  border-left: 4px solid #03dac6;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.success-message i {
+  color: #03dac6;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
