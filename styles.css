@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 1rem;
   flex: 1;
@@ -39,6 +39,8 @@ h1 {
 
 .card-container.show-table {
   grid-template-columns: 1fr 4fr;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .card {
