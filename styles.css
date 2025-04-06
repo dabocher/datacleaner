@@ -117,6 +117,14 @@ h1 {
   background-color: #a370db;
 }
 
+.upload-btn.active {
+  background-color: #03dac6;
+}
+
+.upload-btn.active:hover {
+  background-color: #00b3a6;
+}
+
 .file-info {
   margin-top: 1.5rem;
   padding: 1rem;
